@@ -1,26 +1,29 @@
-nclude <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void InsertionSort(int arr[], int array_size);
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main() {
-    int arr[5] = {4, 23, 56, 7, 8};
-    int array_size = 5;
-    int i;
-    InsertionSort(arr, array_size);
-    for (i = 0; i < array_size; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-    return 0;
-}
+int main() 
+{
+	int arr[10]={4 , 6 , 9 , 1 , 45 , 50 , 2 , 23 , 80 , 91};
+	int s,i;
+	printf("the number to be checked:");
+	scanf("%d", &s);
 
-void InsertionSort(int arr[], int array_size) {
-    int i, j, small;
-    for (i = 0; i < array_size; i++) {
-        small = arr[i];
-        for (j = i - 1; j >= 0 && small < arr[j]; j--) {
-            arr[j + 1] = arr[j];
-        }
-        arr[j + 1] = small;
-    }
+	for(i=0;i<10;i++)
+	{
+		if (arr[i]== s)
+		{
+			printf ("the number is present in the array\n");
+			break;
+		}
+		else
+		{
+		printf("the number is not present");
+		break;
+		}
+		
+	}
+	
+	return 0;
 }
